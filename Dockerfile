@@ -1,11 +1,11 @@
 FROM gliderlabs/alpine:3.4
 
 RUN apk-install \
-    python3 \
+    python \
     supervisor && \
-    python3 -m ensurepip && \
+    python -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \
-    pip3 install --upgrade pip setuptools && \
+    pip install --upgrade pip setuptools && \
     rm -r /root/.cache
 
 RUN mkdir -p /app
