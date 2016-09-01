@@ -5,7 +5,7 @@ build: clean check-env get-version
 	docker build -t $(REGISTRY)/marathon_autoscaler:$(VERSION) .
 
 build-test:
-	cd tests/stress_test_app && docker build -t $(REGISTRY)/stress_test_app .
+	cd tests/stress_tester_app && docker build -t $(REGISTRY)/stress_test_app .
 
 check-env:
 ifndef REGISTRY
